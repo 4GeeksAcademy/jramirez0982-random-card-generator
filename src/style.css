@@ -1,5 +1,22 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: green;
+}
+
+.heart-diamond{
+    font-weight: bold;
+    font-size: 80px;
+    color: red
+    
+}
+
+.spades-cube{
+    font-weight: bold;
+    font-size: 80px;
+    color: black
+}
+
+#palo-inferior{
+    transform: rotate(180deg);
 }
