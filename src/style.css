@@ -4,19 +4,20 @@ body{
     background: green;
 }
 
-.heart-diamond{
+.simbol{
     font-weight: bold;
     font-size: 80px;
-    color: red
+    
     
 }
 
-.spades-cube{
-    font-weight: bold;
-    font-size: 80px;
-    color: black
-}
 
 #palo-inferior{
     transform: rotate(180deg);
+}
+
+h2{
+    margin: 16px; 
+    color: white; 
+    font-weight: bold;
 }

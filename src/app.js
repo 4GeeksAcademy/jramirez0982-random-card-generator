@@ -9,34 +9,40 @@ function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-
-window.onload = function () {
+function generateCard() {
   //write your code here
   let arrayPalos = ["♦", "♥", "♠", "♣"];
   let arrayNumbers = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 
   let paloSelected = getRandomElement(arrayPalos);
   let numberSelected = getRandomElement(arrayNumbers);
-  let classSelected = "";
+  let color = "";
 
   if (paloSelected == "♦" || paloSelected == "♥") {
-    classSelected = "heart-diamond";
+    color = "red";
   }
   else {
-    classSelected = "spades-cube";
+    color = "black";
   }
 
   let paloSup = document.getElementById("palo-superior");
-  paloSup.classList.add(classSelected);
+  paloSup.style.color = color;
   paloSup.innerText = paloSelected;
 
   let paloInf = document.getElementById("palo-inferior");
-  paloInf.classList.add(classSelected);
+  paloInf.style.color = color;
   paloInf.innerText = paloSelected
 
   document.getElementById("numero").innerText = numberSelected;
   
   //console.log("Hello Rigo from the console!");
-
   
 };
+
+
+window.onload = generateCard
+let boton = document.getElementById("generateButton");
+boton.addEventListener("click", generateCard);
+
+//window.setTimeout(generateCard, 5000);
+setInterval(generateCard, 3000)

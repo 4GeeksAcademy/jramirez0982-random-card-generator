@@ -13,15 +13,21 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="card position-absolute top-50 start-50 translate-middle" style="width: 18rem; height: 28rem;">
-      <div class="position-relative"></div>
-      <p id="palo-superior" class="position-absolute top-0 start-0" style="margin: 16px;"></p>
-      <p id="numero" class="position-absolute top-50 start-50 translate-middle" style="font-weight: bold; font-size: 120px;">8</p>
-      <p id="palo-inferior" class="position-absolute bottom-0 end-0" style="margin: 16px;"></p>
+  <div class="container d-flex flex-column align-items-center">
+    <h2 class="d-flex justify-content-center">GENERADOR DE CARTAS ALEATORIAS</h2>
+    
+    <div class="card mb-4 d-flex flex-column justify-content-between" style="width: 18rem; height: 28rem;">
+      <p id="palo-superior" class="lh-1 ms-2 simbol"></p>
+      <p id="numero" class="text-center" style="font-size: 110px;">8</p>
+      <p id="palo-inferior" class="lh-1 me-2 mb-0 simbol"></p>
+    
     </div>
+    <div class="d-flex justify-content-center">
+      <button id="generateButton" class="btn btn-primary">Nueva Carta</button>
     </div>
   </div>
+  
+
   <script type="module" src="/app.js"></script>
 </body>
 
