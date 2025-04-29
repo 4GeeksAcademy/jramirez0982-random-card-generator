@@ -34,15 +34,36 @@ function generateCard() {
   paloInf.innerText = paloSelected
 
   document.getElementById("numero").innerText = numberSelected;
-  
+
   //console.log("Hello Rigo from the console!");
-  
+
 };
+
+let counterActive
+
+function temporizado() {
+  console.log(counterActive);
+
+  if (counterActive) {
+    clearInterval(counterActive)
+  }
+  counterActive = setInterval(generateCard, 1000)
+}
+
+function detener() {
+  clearInterval(counterActive)
+}
 
 
 window.onload = generateCard
 let boton = document.getElementById("generateButton");
 boton.addEventListener("click", generateCard);
 
+let startButton = document.getElementById("startButtonCounter");
+startButton.addEventListener("click", temporizado);
+
+let stopButton = document.getElementById("stopButtonCounter")
+stopButton.addEventListener("click", detener)
+
 //window.setTimeout(generateCard, 5000);
-setInterval(generateCard, 3000)
+
